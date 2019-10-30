@@ -6,8 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Command\" />
-    <Folder Include="SOLID\" />
+    <Folder Include="NewFolder\" />
+    <Folder Include="SOLID\4 Interface Segregation\" />
+    <Folder Include="SOLID\5 Dependency Inversion\" />
   </ItemGroup>
 
 </Project>
