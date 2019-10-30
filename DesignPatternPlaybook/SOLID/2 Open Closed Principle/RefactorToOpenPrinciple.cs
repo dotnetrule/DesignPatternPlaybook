@@ -24,8 +24,10 @@ namespace DesignPatternPlaybook.SOLID._2_Open_Closed_Principle
         //  Provides a plug in model
         //  Implementations utilize Inheritence Client utilizes Composition
 
+        
+        // Violation of OPEN CLOSED PRINCIPLE can be identified when classes or functions depend on being 'opened' or 'closed' through editing other classes.
 
-        //Example of Dependancy to avoid IF statements
+        //Example of how to avoid IF statements
         public class Cart
         {
             private readonly List<OrderItem> _items;
