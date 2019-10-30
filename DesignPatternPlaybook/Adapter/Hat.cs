@@ -9,6 +9,8 @@ namespace DesignPatternPlaybook.Adapter
     {
         private string Name;
         private int Price;
+        public string Description;
+
 
         public string getName()
         {

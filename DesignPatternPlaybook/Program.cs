@@ -1,5 +1,6 @@
 ﻿using System;
 using DesignPatternPlaybook.Decorator;
+using DesignPatternPlaybook.Factory;
 using DesignPatternPlaybook.Iterator;
 
 namespace DesignPatternPlaybook
@@ -12,12 +13,13 @@ namespace DesignPatternPlaybook
 
             WriteDecoratorDP();
             WriteIteratorDP();
-
+            WriteFactoryDP();
             Console.ReadLine();
         }
 
         public static void WriteDecoratorDP()
         {
+            Console.WriteLine("/// Decorator DP");
             var hat = new PremiumHat();
             Console.WriteLine(hat.getName());
 
@@ -30,13 +32,21 @@ namespace DesignPatternPlaybook
         }
         public static void WriteIteratorDP()
         {
+            Console.WriteLine("/// Iterator DP");
             var files = new FileIterator(@"C:\Users\verschui\Pictures","jpg");
             foreach (var file in files)
             {
                 Console.WriteLine(file.FullName); 
             }
-            
+        }
 
+
+        public static void WriteFactoryDP()
+        {
+            Console.WriteLine("/// FACTORY DP");
+
+            var repo = RepositoryFactory.GetRepository("Sql");
+            Console.WriteLine(repo.GetType().ToString());
         }
     }
 }
