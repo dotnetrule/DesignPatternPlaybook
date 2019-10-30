@@ -8,7 +8,5 @@ namespace DesignPatternPlaybook.Adapter
     {
         private List<Item> items = new List<Item>();
 
-
-
     }
 }
