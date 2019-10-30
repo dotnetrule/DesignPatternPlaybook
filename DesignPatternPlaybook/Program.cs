@@ -1,5 +1,6 @@
 ﻿using System;
 using DesignPatternPlaybook.Decorator;
+using DesignPatternPlaybook.Iterator;
 
 namespace DesignPatternPlaybook
 {
@@ -10,6 +11,8 @@ namespace DesignPatternPlaybook
             Console.WriteLine("Hello World!");
 
             WriteDecoratorDP();
+
+            WriteIteratorDP();
 
             Console.ReadLine();
         }
@@ -24,6 +27,17 @@ namespace DesignPatternPlaybook
 
             var ribonnedgoldenhat = new RibbonedHat(goldenHat);
             Console.WriteLine(ribonnedgoldenhat.getName()); 
+
+        }
+        public static void WriteIteratorDP()
+        {
+            var Mp3s = new JpgIterator(@"C:\Users\verschui\Pictures");
+            foreach (var mp3 in Mp3s)
+            {
+                Console.WriteLine(mp3.FullName); 
+            }
+            
+
         }
     }
 }

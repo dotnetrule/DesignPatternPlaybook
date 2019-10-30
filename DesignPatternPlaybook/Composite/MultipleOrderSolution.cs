@@ -20,7 +20,7 @@ namespace DesignPatternPlaybook.Composite
             throw new NotImplementedException();
         }
 
-        int IOrder.Total()
+        string IOrder.Total()
         {
             throw new NotImplementedException();
         }
