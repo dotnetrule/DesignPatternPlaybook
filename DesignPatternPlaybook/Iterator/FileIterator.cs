@@ -6,21 +6,22 @@ using System.Text;
 
 namespace DesignPatternPlaybook.Iterator
 {
-    public class JpgIterator : IEnumerable<FileInfo>
+    public class FileIterator : IEnumerable<FileInfo>
     {
         private string _startingPath;
-
+        private string _extension;
         private IEnumerator<string> _fileEnumerator;
 
-        public JpgIterator(string startingPath)
+        public FileIterator(string startingPath, string extension)
         {
             _startingPath = startingPath;
-            
+            _extension = extension;
+
         }
 
         public IEnumerator<FileInfo> GetEnumerator()
         {
-            var files = Directory.EnumerateFiles(_startingPath, "*.jpg", SearchOption.AllDirectories);
+            var files = Directory.EnumerateFiles(_startingPath, $"*.{_extension}", SearchOption.AllDirectories);
 
             foreach (var file in files)
             {

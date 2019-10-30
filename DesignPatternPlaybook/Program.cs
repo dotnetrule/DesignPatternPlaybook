@@ -11,7 +11,6 @@ namespace DesignPatternPlaybook
             Console.WriteLine("Hello World!");
 
             WriteDecoratorDP();
-
             WriteIteratorDP();
 
             Console.ReadLine();
@@ -31,10 +30,10 @@ namespace DesignPatternPlaybook
         }
         public static void WriteIteratorDP()
         {
-            var Mp3s = new JpgIterator(@"C:\Users\verschui\Pictures");
-            foreach (var mp3 in Mp3s)
+            var files = new FileIterator(@"C:\Users\verschui\Pictures","jpg");
+            foreach (var file in files)
             {
-                Console.WriteLine(mp3.FullName); 
+                Console.WriteLine(file.FullName); 
             }
             
 
