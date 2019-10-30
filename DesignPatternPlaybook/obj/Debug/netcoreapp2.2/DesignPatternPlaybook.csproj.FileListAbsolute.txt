@@ -1,0 +1,11 @@
+C:\Development_local\GitHub\DesignPatternPlaybook\DesignPatternPlaybook\bin\Debug\netcoreapp2.2\DesignPatternPlaybook.deps.json
+C:\Development_local\GitHub\DesignPatternPlaybook\DesignPatternPlaybook\bin\Debug\netcoreapp2.2\DesignPatternPlaybook.runtimeconfig.json
+C:\Development_local\GitHub\DesignPatternPlaybook\DesignPatternPlaybook\bin\Debug\netcoreapp2.2\DesignPatternPlaybook.runtimeconfig.dev.json
+C:\Development_local\GitHub\DesignPatternPlaybook\DesignPatternPlaybook\bin\Debug\netcoreapp2.2\DesignPatternPlaybook.dll
+C:\Development_local\GitHub\DesignPatternPlaybook\DesignPatternPlaybook\bin\Debug\netcoreapp2.2\DesignPatternPlaybook.pdb
+C:\Development_local\GitHub\DesignPatternPlaybook\DesignPatternPlaybook\obj\Debug\netcoreapp2.2\DesignPatternPlaybook.csprojAssemblyReference.cache
+C:\Development_local\GitHub\DesignPatternPlaybook\DesignPatternPlaybook\obj\Debug\netcoreapp2.2\DesignPatternPlaybook.csproj.CoreCompileInputs.cache
+C:\Development_local\GitHub\DesignPatternPlaybook\DesignPatternPlaybook\obj\Debug\netcoreapp2.2\DesignPatternPlaybook.AssemblyInfoInputs.cache
+C:\Development_local\GitHub\DesignPatternPlaybook\DesignPatternPlaybook\obj\Debug\netcoreapp2.2\DesignPatternPlaybook.AssemblyInfo.cs
+C:\Development_local\GitHub\DesignPatternPlaybook\DesignPatternPlaybook\obj\Debug\netcoreapp2.2\DesignPatternPlaybook.dll
+C:\Development_local\GitHub\DesignPatternPlaybook\DesignPatternPlaybook\obj\Debug\netcoreapp2.2\DesignPatternPlaybook.pdb
