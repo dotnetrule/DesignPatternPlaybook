@@ -6,6 +6,20 @@ namespace DesignPatternPlaybook.Static
 {
     public static class Funcs
     {
+
+        private static Func<int, string> IntToString = x => x.ToString();
+
+        private static Func<string, bool> CompareString(string q)
+        {
+            return x => (q == x );
+        }
+        private static Func<CustomClass, bool> CompareClassString(string q)
+        {
+            return x => (q == x.Name) || (q == x.Description);
+        }
+
+
+
         public static void MainFunc()
         {
             Console.WriteLine("Func takes an input and returns the OUTPUT. The last parameter.");
@@ -39,16 +53,7 @@ namespace DesignPatternPlaybook.Static
             Console.WriteLine(found.Count);
         }
 
-        private static Func<int, string> IntToString = x => x.ToString();
 
-        private static Func<string, bool> CompareString(string q)
-        {
-            return x => (q == x );
-        }
-        private static Func<CustomClass, bool> CompareClassString(string q)
-        {
-            return x => (q == x.Name) || (q == x.Description);
-        }
 
     }
 
