@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="NewFolder\" />
     <Folder Include="SOLID\5 Dependency Inversion\" />
   </ItemGroup>
 

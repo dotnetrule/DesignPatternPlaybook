@@ -2,6 +2,7 @@
 using DesignPatternPlaybook.Decorator;
 using DesignPatternPlaybook.Factory;
 using DesignPatternPlaybook.Iterator;
+using DesignPatternPlaybook.Static;
 
 namespace DesignPatternPlaybook
 {
@@ -9,7 +10,9 @@ namespace DesignPatternPlaybook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Start...");
+            
+            Funcs.MainFunc();
 
             WriteDecoratorDP();
             WriteIteratorDP();
