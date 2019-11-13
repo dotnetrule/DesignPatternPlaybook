@@ -1,0 +1,46 @@
+//violation
+//Observe how we create the ErrorLogger instance from within the Post class.
+//This is a violation of the dependency inversion principle.
+//If we wanted to use a different kind of logger, we would have to modify the Post class.
+
+class Post
+{
+    private ErrorLogger errorLogger = new ErrorLogger();
+
+    void CreatePost(Database db, string postMessage)
+    {
+        try
+        {
+            db.Add(postMessage);
+        }
+        catch (Exception ex)
+        {
+            errorLogger.log(ex.ToString())
+        }
+    }
+}
+
+
+//Solved
+//By using dependency injection we no longer rely on the Post class to define the specific type of logger.
+class Post
+{
+    private Logger _logger;
+
+    public Post(Logger injectedLogger)
+    {
+        _logger = injectedLogger;
+    }
+
+    void CreatePost(Database db, string postMessage)
+    {
+        try
+        {
+            db.Add(postMessage);
+        }
+        catch (Exception ex)
+        {
+            logger.log(ex.ToString())
+        }
+    }
+}
