@@ -1,5 +1,8 @@
-Here is a non-exhaustive list of name suggestions you could use:
+## A repository with examples of different design patterns and best practices.
 
+
+# Tips on naming conventions for classess.
+Here is a non-exhaustive list of name suggestions you could use:
 - SomeSortOfCommand
 - SomeSortOfConfiguration
 - SomeSortOfCredentials
