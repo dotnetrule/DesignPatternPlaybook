@@ -1,6 +1,5 @@
 db.lock
 /.vs/DesignPatternPlaybook
-/MediatRDemo/bin/Debug/net5.0
-/MediatRDemo/obj
-obj/*
-bin/*
+*obj*
+*bin*
+Debug/*
