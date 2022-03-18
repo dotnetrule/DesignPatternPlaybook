@@ -1,10 +1,10 @@
-        
- // Liskov Substitution Principle
+
+// Liskov Substitution Principle
 // To recognize bad code 'smells';
 //TIPS:
 //Tell, Don't Ask'
-    //Don't interrogate object for their internals.
-    //Tell the object what to do, dont ask and retrieve.
+//Don't interrogate object for their internals.
+//Tell the object what to do, dont ask and retrieve.
 
 
 // Remember IS-SUBSTITUTABLE-FOR instead of a IS-A relationship
@@ -25,17 +25,28 @@
 //More generally it states that objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.
 // Observe how the call of CreatePost() in the case of a subtype MentionPost won’t do what it is supposed to do; notify the user and override existing mention.
 // Since the CreatePost() method is not overridden in MentionPost the CreatePost() call will simply be delegated upwards in the class hierarchy and call CreatePost() from its parent class
-class Post
+public class Database
 {
-    void CreatePost(Database db, string postMessage)
+    public void Add(object obj) { }
+    public void AddAsTag(object obj) { }
+    public void NotifyUser(object obj) { }
+
+    public void OverrideExistingMention(object obj, object arg) { }
+}
+
+
+public class Post
+{
+    public virtual void CreatePost(Database db, string postMessage)
     {
         db.Add(postMessage);
     }
 }
 
-class TagPost : Post
+
+public class TagPost : Post
 {
-    override void CreatePost(Database db, string postMessage)
+    public override void CreatePost(Database db, string postMessage)
     {
         db.AddAsTag(postMessage);
     }
@@ -57,7 +68,8 @@ class PostHandler
 {
     private database = new Database();
 
-    void HandleNewPosts() {
+    void HandleNewPosts()
+    {
         List<string> newPosts = database.getUnhandledPostsMessages();
 
         foreach (string postMessage in newPosts)
@@ -72,7 +84,8 @@ class PostHandler
             {
                 post = new MentionPost();
             }
-            else {
+            else
+            {
                 post = new Post();
             }
 
