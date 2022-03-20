@@ -14,8 +14,18 @@ connection.on("ReceiveMessage", function (user, message) {
     li.textContent = `${user} says ${message}`;
 });
 
+
+connection.on("UserConnected", function (user, message) {
+    var li = document.createElement("li");
+    document.getElementById("messagesList").appendChild(li);
+    li.textContent = `${user} has connected to the page`;
+});
+
 connection.start().then(function () {
     document.getElementById("sendButton").disabled = false;
+    connection.invoke("OnConnected", "New user").catch(function (err) {
+        return console.error(err.toString());
+    });
 }).catch(function (err) {
     return console.error(err.toString());
 });
